@@ -4,10 +4,18 @@ There will be two selections for rock, paper, or scissors, one by player, one by
 Declare a winner depending on results*/
 
 
-var rps = Array('rock', 'paper', 'scissors');
+
+function playRound(playerSelection, computerSelection) {
+
+} 
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+
 
 function getComputerChoice(str) {
-    console.log(str[Math.floor(Math.random() * str.length)]);
+    var rps = Array('rock', 'paper', 'scissors');
+    rps = (str[Math.floor(Math.random() * str.length)]);
 }
 
-getComputerChoice(rps) 
+console.log(getComputerChoice)
