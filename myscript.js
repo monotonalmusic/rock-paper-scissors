@@ -6,38 +6,39 @@ Declare a winner depending on results*/
 
 
 
-const playerSelection = "rock";
-const rps = Array("rock", "paper", "scissors");
-let roundWinner = " ";
-let computerSelection = getComputerChoice().toLowerCase();
-console.log(computerSelection);
+var playerChoice = "rock";
+let computerChoice = getComputerChoice();
+let roundWinner = playRound(playerChoice.toLowerCase(), computerChoice.toLowerCase());
+let returnMessage = updateScore(roundWinner, playerChoice, computerChoice);
+console.log("player " + playerChoice);
+console.log("computer " + computerChoice);
+console.log(returnMessage);
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3)
         switch (randomNumber) {
           case 0:
-            return 'rock'
+            return "rock"
           case 1:
-            return 'paper'
+            return "paper"
           case 2:
-            return 'scissors'
+            return "scissors"
         }
 }
 
+//Parameters: Takes playerSelection and computerSelection as a string
+//Return: String of winner
 function playRound (playerSelection, computerSelection) {
-    computerSelection = getComputerChoice().toLowerCase();
-    playerSelection = playerSelection().toLowerCase();
-
     if (playerSelection === computerSelection)
     {
-        roundWinner = "tie";
+        return "Tie!";
     }
     else if (
         (computerSelection == "rock" && playerSelection == "scissors") ||
         (computerSelection == "paper" && playerSelection == "rock") ||
         (computerSelection == "scissors" && playerSelection == "paper")
     ){
-        roundWinner = "computer";
+        return "Computer wins!";
     }
 
    else if (
@@ -45,7 +46,35 @@ function playRound (playerSelection, computerSelection) {
         (computerSelection == "paper" && playerSelection == "scissors") ||
         (computerSelection == "scissors" && playerSelection == "rock")
     ){
-        roundWinner = "player";
+        return "Player wins!";
     }
+}
+
+//Parameters: Takes roundWinner after running playRound
+//Return: Returns message to player accordingly
+function updateScore(winner, playerSelection, computerSelection) {
+    if (winner === "Tie!") 
+        return `It's a tie!`
+    if (winner === "Computer wins!") 
+        return `Computer wins! ${capitalizeFirstLetter(computerSelection)} beats ${playerSelection.toLowerCase()}`
+    if (winner === "Player wins!") 
+        return `Player wins! ${capitalizeFirstLetter(playerSelection)} beats ${computerSelection.toLowerCase()}`  
+}
+
+//Slice first letter of string, apply toUpperCase, add back rest of string
+function capitalizeFirstLetter (str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() 
+}
+
+//Parameters: None
+//Description: Call function game, to play playRound 5 times, keep score of player & computer, display score at the end of 5 rounds
+//Return: Results of 5 rounds as a string
+
+function game() {
+    //Make a loop
+    
+    //Call playRound function
+    //Store the winner of each playRound function
+    //Return a score board
 }
 
