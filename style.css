@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.buttons {
+    display: flex;
+    margin-left: 12vh;
+    gap: 20px;
+
+}
+
+.results {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.player {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.computer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
