@@ -54,10 +54,12 @@ function updateDisplay(roundResult) {
     document.getElementById("player-score").innerHTML = playerScore;
     if (computerScore == 5) {
         alert("Computer wins!")
+        window.location.reload();
     } 
     
     else if (playerScore == 5) {
         alert("Player wins!")
+        window.location.reload();
     }
 }
 
