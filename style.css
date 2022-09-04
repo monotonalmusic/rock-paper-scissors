@@ -1,5 +1,6 @@
 body {
-    margin: 0;
+    margin-left: 50px;
+    margin-right: 75px;
     min-height: 100vh;
 }
 
@@ -8,11 +9,24 @@ body {
     justify-content: space-between;
 }
 
+p.score {
+    font-size: 32px;
+    font-weight: 600;
+}
+button {
+    font-size: 50px;
+    transition-duration: 0.4ms;
 
+}
+
+button:hover {
+    background: grey;
+    color: white;
+}
 .buttons {
     display: flex;
-    margin-left: 12vh;
-    gap: 20px;
+    margin-left: 9vh;
+    gap: 30px;
 
 }
 
@@ -20,6 +34,7 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+
 }
 .player {
     display: flex;
