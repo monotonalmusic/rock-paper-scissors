@@ -78,24 +78,4 @@ document.getElementById("scissors").addEventListener("click", function () {
 
 
 
-//one button event listener, in this case scissors
-/*document.getElementById("scissors").addEventListener("click", function () { 
-    let roundResult = playRound("scissors", getComputerChoice());
-    console.log(roundResult);
-    document.getElementById("results").innerHTML = roundResult;
-    document.getElementById("computer-score").innerHTML = computerScore;
-    document.getElementById("player-score").innerHTML = playerScore;
-}); */
-
-// numOfPlayerWins = winnerArray.filter(x => x === "Player wins!").length
-// console.log("Player: " + numOfPlayerWins)
-
-// numOfComputerWins = winnerArray.filter(x => x === "Computer wins!").length
-// console.log("Computer: " + numOfComputerWins)
-
-//First tally number of player wins
-//Then tally number of computer wins
-//If player is greater than computer, player wins and vice versa
-//Store the winner of each playRound function
-//Return a score board
 

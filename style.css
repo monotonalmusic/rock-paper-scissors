@@ -13,6 +13,14 @@ p.score {
     font-size: 32px;
     font-weight: 600;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
 button {
     font-size: 50px;
     transition-duration: 0.4ms;
@@ -23,18 +31,18 @@ button:hover {
     background: grey;
     color: white;
 }
-.buttons {
-    display: flex;
-    margin-left: 9vh;
-    gap: 30px;
 
-}
 
 .results {
     display: flex;
     flex-flow: column;
     align-items: center;
 
+}
+
+#results {
+    font-size: 50px;
+    font-weight: bold;
 }
 .player {
     display: flex;
